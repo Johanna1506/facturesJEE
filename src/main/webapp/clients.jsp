@@ -5,6 +5,8 @@
   Time: 19:42
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="java.util.List" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -109,18 +111,12 @@
             <th>Nom</th>
             <th>Adresse</th>
         </tr>
-        <tr>
-            <td>Camille</td>
-            <td>1 rue de la Grosse Pompe 33000 Bordeaux</td>
-        </tr>
-        <tr>
-            <td>Camille</td>
-            <td>1 rue de la Grosse Pompe 33000 Bordeaux</td>
-        </tr>
-        <tr>
-            <td>Camille</td>
-            <td>1 rue de la Grosse Pompe 33000 Bordeaux</td>
-        </tr>
+        <c:forEach items="${clients}" var="client" varStatus="variableStatus">
+            <tr>
+                <td>${client.nom}</td>
+                <td>${client.adresse}</td>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
 </section>
