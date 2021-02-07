@@ -1,7 +1,7 @@
 package com.example.facturations.entite;
 
 import javax.persistence.*;
-import java.util.Collection;
+
 
 @Entity
 public class Clients {

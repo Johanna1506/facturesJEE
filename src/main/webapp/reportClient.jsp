@@ -1,17 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: johannajato
-  Date: 03/02/2021
-  Time: 19:57
+  Date: 07/02/2021
+  Time: 18:48
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="java.util.List" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Factures</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Confirmation nouveau CLient</title>
 </head>
 <body>
 <header>
@@ -104,26 +101,11 @@
         <a href="factures.jsp">Factures</a>
     </nav>
 </header>
+<section>
+    <h1>Le nouveau client a bien été créé</h1>
+    <a href="index.jsp">Revenir a l'accueil </a>
+    <a href="formClients.jsp">Ajouter un nouveau client !</a>
+</section>
 
-<table>
-    <thead>
-    <tr>
-        <th>Numero</th>
-        <th>Date</th>
-        <th>Client</th>
-        <th>Montant HT</th>
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach items="${factures}" var="facture" varStatus="variableStatus">
-        <tr>
-            <td>${facture.numero}</td>
-            <td>${facture.date}</td>
-            <td>${facture.client.nom}</td>
-            <td>${facture.montant}</td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
 </body>
 </html>

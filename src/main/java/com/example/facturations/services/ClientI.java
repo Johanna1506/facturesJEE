@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ClientI {
     List<Clients> findAllClients();
-    void create(ClientDTO clientDto);
+    void create(ClientDTO clientDTO);
 }
